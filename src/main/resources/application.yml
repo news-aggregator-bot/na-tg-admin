@@ -1,0 +1,19 @@
+server:
+  port: 8080
+camel:
+  main:
+    banner-mode: "off"
+  springboot:
+    main-run-controller: true
+bot:
+  telegram:
+    name: bepicky-admin
+    token: ${TG_ADMIN_TOKEN}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  instance:
+    hostName: na-admin-bot
