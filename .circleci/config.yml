@@ -46,7 +46,7 @@ jobs:
       - run:
           name: docker push
           command: |
-            docker push docker.pkg.github.com/news-aggregator-bot/artifactory/bepicky.na-tg-v:latest
+            docker push docker.pkg.github.com/news-aggregator-bot/artifactory/bepicky.na-tg-admin:latest
 
       - run:
           name: create ssh config
