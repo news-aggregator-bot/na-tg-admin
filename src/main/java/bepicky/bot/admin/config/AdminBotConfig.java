@@ -1,8 +1,11 @@
 package bepicky.bot.admin.config;
 
 import bepicky.bot.core.BotRouter;
+import bepicky.bot.core.cmd.CommandTranslator;
 import bepicky.bot.core.message.CallbackMessageHandlerManager;
 import bepicky.bot.core.message.MessageHandlerManager;
+import bepicky.bot.core.message.handler.IDefaultMessageHandler;
+import bepicky.bot.core.message.handler.MessageHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
@@ -11,6 +14,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 import javax.annotation.PostConstruct;
 import java.util.Collections;
+import java.util.List;
 
 @Configuration
 public class AdminBotConfig {
@@ -32,8 +36,11 @@ public class AdminBotConfig {
     }
 
     @Bean
-    public MessageHandlerManager messageHandlerManager() {
-        return new MessageHandlerManager(Collections.emptyList(), null, null);
+    public MessageHandlerManager messageHandlerManager(
+        List<MessageHandler> handlers,
+        IDefaultMessageHandler defaultMessageHandler
+    ) {
+        return new MessageHandlerManager(handlers, defaultMessageHandler, text -> "");
     }
 
     @Bean
