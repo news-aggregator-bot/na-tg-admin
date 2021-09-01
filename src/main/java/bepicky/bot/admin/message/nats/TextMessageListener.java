@@ -1,7 +1,7 @@
 package bepicky.bot.admin.message.nats;
 
 import bepicky.bot.admin.service.INotificationService;
-import bepicky.common.msg.admin.TextMessage;
+import bepicky.common.msg.TextMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.nats.client.Connection;
 import io.nats.client.Dispatcher;
