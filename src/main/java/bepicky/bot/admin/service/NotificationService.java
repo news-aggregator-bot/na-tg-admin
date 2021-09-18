@@ -17,7 +17,10 @@ public class NotificationService implements INotificationService {
 
     @Override
     public void message(Long chatId, String message) {
-        SendMessage msg = new SendMessageBuilder(chatId, message).build();
+        SendMessage msg = new SendMessageBuilder(chatId, message)
+            .disableNotification()
+            .disableWebPreview()
+            .build();
         try {
             bot.execute(msg);
         } catch (TelegramApiException e) {
