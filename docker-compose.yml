@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   na-tg-admin:
-    image: ghcr.io/news-aggregator-bot/artifactory/bepicky.na-tg-admin
+    image: ghcr.io/news-aggregator-bot/bepicky.na-tg-admin
     environment:
       - TG_ADMIN_TOKEN=${TG_ADMIN_TOKEN}
       - SPRING_PROFILES_ACTIVE=${SPRING_PROFILES_ACTIVE}
