@@ -59,12 +59,12 @@
         <dependency>
             <groupId>bepicky</groupId>
             <artifactId>common-communication</artifactId>
-            <version>1.2-30-SNAPSHOT</version>
+            <version>1.2-31</version>
         </dependency>
         <dependency>
             <groupId>bepicky</groupId>
             <artifactId>na-tg-core</artifactId>
-            <version>0.0.5-SNAPSHOT</version>
+            <version>0.0.6</version>
         </dependency>
         <dependency>
             <groupId>io.nats</groupId>
